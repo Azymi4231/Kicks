@@ -18,11 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full h-screen overflow-hidden flex">
-          <div>
-            <Header />
-          </div>
-          <div>{children}</div>
+        <div className="w-full h-screen overflow-hidden flex bg-Gray px-6 py-3 flex-col gap-6">
+          <Header />
+          {children}
         </div>
       </body>
     </html>
