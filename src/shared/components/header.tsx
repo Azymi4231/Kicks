@@ -1,9 +1,9 @@
 import React from "react";
-import KicksLogo from "./svg/kicks-logo-svg";
+import KicksLogo from "../svg/kicks-logo-svg";
 
 const Header = () => {
   return (
-    <div className="bg-WhiteMain flex w-full py-3 rounded-xl">
+    <div className="bg-WhiteMain flex w-full py-3 rounded-xl lg:py-6">
       <div className="w-full flex justify-center">
         <KicksLogo />
       </div>

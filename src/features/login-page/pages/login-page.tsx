@@ -2,8 +2,26 @@
 import React from "react";
 import { Formik } from "formik";
 import LoginForm from "../components/login-form";
+import { liOptions } from "./login-page-constans";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { initializeApp } from "firebase/app";
+import { useRouter } from "next/navigation";
 
 const LoginPage = () => {
+  const router = useRouter();
+  const firebaseConfig = {
+    apiKey: process.env.NEXT_PUBLIC_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_MESSEGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_MESSURMENT_ID,
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
   return (
     <div className="flex flex-col gap-6">
       <div className="text-DarkGray font-semibold gap-2">
@@ -19,8 +37,11 @@ const LoginPage = () => {
           checkbox: false,
         }}
         onSubmit={async (values) => {
-          await new Promise((r) => setTimeout(r, 500));
-          alert(JSON.stringify(values, null, 2));
+          signInWithEmailAndPassword(auth, values.email, values.password)
+            .then((userCredential) => {
+              router.push("product");
+            })
+            .catch((error) => {});
         }}
       >
         <LoginForm />
@@ -35,11 +56,9 @@ const LoginPage = () => {
           Level 1 benefits:
         </p>
         <ul className="list-disc text-DarkGray font-semibold text-sm px-4">
-          <li>Free shipping​</li>
-          <li>A 15% off voucher for your next purchase</li>
-          <li>Access to Members Only products and sales​</li>
-          <li>Access to adidas Running and Training apps</li>
-          <li>​Special offers and promotions​</li>
+          {liOptions.map((item, id) => (
+            <li key={id}>{item.name}</li>
+          ))}
         </ul>
         <p className="text-DarkGray font-semibold text-sm">
           Join now to start earning points, reach new levels and unlock more
