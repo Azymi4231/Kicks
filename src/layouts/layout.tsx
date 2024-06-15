@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../theme/globals.css";
 import Header from "@/shared/header";
+import Footer from "@/shared/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,11 @@ export default function RootLayout({
         <div className="w-full h-screen overflow-hidden flex bg-Gray px-6 py-3 flex-col gap-6">
           <Header />
           {children}
+        </div>
+        <div className="w-full h-screen overflow-hidden flex bg-Gray px-6 py-3 flex-col gap-6">
+          <div className="bg-Blue rounded-t-3xl">
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
