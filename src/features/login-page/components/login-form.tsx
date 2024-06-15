@@ -31,7 +31,7 @@ const LoginForm = () => {
         type="submit"
         className="text-left bg-DarkGray px-4 py-3 rounded-lg text-Gray font-medium"
       >
-        Submit
+        EMAIL LOGIN
       </button>
     </Form>
   );

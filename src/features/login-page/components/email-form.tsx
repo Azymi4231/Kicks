@@ -9,7 +9,7 @@ const EmailForm = () => {
       {formOptions.map((item) => (
         <div className="flex w-full flex-row-reverse justify-end items-start gap-2 ">
           <Field
-            className="rounded-lg border-White border bg-Blue px-4 py-3 text-White"
+            className="rounded-lg border-White border bg-Blue px-4 py-3 text-White w-full"
             id={item.id}
             name={item.id}
             placeholder={item.placeholder}
