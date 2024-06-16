@@ -9,24 +9,26 @@ import avatar1 from "../../../../public/avatar1.png";
 import avatar2 from "../../../../public/avatar2.png";
 import avatar3 from "../../../../public/avatar3.png";
 
-import { text } from "stream/consumers";
-
 export const products = [
   {
     image: Shoe3,
     text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    id: "1",
   },
   {
     image: Shoe4,
     text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    id: "2",
   },
   {
     image: Shoe5,
     text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    id: "3",
   },
   {
     image: Shoe6,
     text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    id: "4",
   },
 ];
 

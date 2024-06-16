@@ -2,7 +2,6 @@ import Image from "next/image";
 import Shoe1 from "../../../../public/Shoe-cart1.png";
 import { checkout, description } from "./cart-page-constans";
 import ThrashcanLogo from "@/shared/svg/thrashcan-logo-svg";
-import HeartLogo from "@/shared/svg/heart-logo-svg";
 import HeartLogo2 from "@/shared/svg/heart-logo2-svg";
 const CartPage = () => {
   return (
@@ -15,7 +14,7 @@ const CartPage = () => {
         </p>
         <p className="text-sm">Join us or Sign-in</p>
       </div>
-      <div className="flex flex-col sm:flex-row justify-between">
+      <div className="flex flex-col sm:flex-row gap-4">
         <div className="flex flex-col bg-WhiteMain p-4 gap-2 rounded-md">
           <div className="flex flex-col  gap-2 font-semibold">
             <h2 className="text-xl">Your Bag</h2>
@@ -28,7 +27,9 @@ const CartPage = () => {
                   <Image src={Shoe1} alt="Shoe1" />
                   <div className="flex flex-col gap-2">
                     <div className="font-semibold text-DarkGray">
-                      <h3 key={id}>{item.name}</h3>
+                      <h3 key={id} className="text-2xl">
+                        {item.name}
+                      </h3>
                       <p key={id} className="text-sm">
                         {item.desc1}
                       </p>
@@ -40,7 +41,7 @@ const CartPage = () => {
                       <p key={id}>{item.size}</p>
                       <p key={id}>{item.quantity}</p>
                     </div>
-                    <p key={id} className="text-Blue font-semibold text-xl">
+                    <p key={id} className="text-Blue font-semibold text-2xl">
                       {item.price}
                     </p>
                   </div>

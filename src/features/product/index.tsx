@@ -1,2 +1,3 @@
-import ProductPage from "@/features/product/pages/product-page";
+import ProductPage from "./pages/product-page";
+
 export { ProductPage };
