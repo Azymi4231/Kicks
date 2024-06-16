@@ -1,9 +1,6 @@
 import Image from "next/image";
 import Shoe from "../../../../public/big-shoe-product-page.png";
-import Shoe3 from "../../../../public/shoe3.png";
-import Shoe4 from "../../../../public/shoe4.png";
-import Shoe5 from "../../../../public/shoe5.png";
-import Shoe6 from "../../../../public/shoe6.png";
+import { products } from "./product-constans";
 
 const ProductPage = () => {
   return (
@@ -30,29 +27,34 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between">
-        <p className="font-semibold text-2xl pr-4">Don’t miss out new drops</p>
-        <button className="font-medium bg-Blue text-White rounded-lg px-4 py-2">
+      <div className="flex">
+        <p className="flex font-semibold text-2xl">Don’t miss out new drops</p>
+        <button className="flex font-medium bg-Blue w-max text-White rounded-lg px-4 py-2 text-sm ">
           SHOP NOW DROPS
         </button>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <div className="flex flex-col items-center">
-          <Image src={Shoe3} alt="Shoe3" className="rounded-xl" />
-          <p className="text-center">Text 1</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={Shoe4} alt="Shoe4" className="rounded-xl" />
-          <p className="text-center">Text 2</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={Shoe5} alt="Shoe5" className="rounded-xl" />
-          <p className="text-center">Text 3</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={Shoe6} alt="Shoe6" className="rounded-xl" />
-          <p className="text-center">Text 4</p>
-        </div>
+        {products.map((product, index) => (
+          <div key={index} className="flex flex-col ">
+            <div className="rounded-xl overflow-hidden">
+              <Image
+                src={product.image}
+                alt={`Shoe ${index + 3}`}
+                layout="responsive"
+                width={500}
+                height={500}
+              />
+            </div>
+            <p className="font-semibold text-DarkGray text-center">
+              {product.text}
+            </p>
+            <button className="bg-DarkGray flex flex-row rounded-lg px-4 py-2 font-medium text-xs">
+              <p className="text-white flex mx-auto">
+                View Product <span className="text-Yellow px-1">$125</span>
+              </p>
+            </button>
+          </div>
+        ))}
       </div>
     </div>
   );
