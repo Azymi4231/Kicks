@@ -23,29 +23,31 @@ const LoginPage = () => {
   const auth = getAuth(app);
 
   return (
-    <div className="flex flex-col gap-6">
-      <div className="text-DarkGray font-semibold gap-2">
-        <h1 className="text-2xl">Login</h1>
-        <div className="flex">
-          <p className="border-b border-DarkGray">Login to join club</p>
+    <div className="flex flex-col gap-6 sm:flex-row">
+      <div className="flex flex-col gap-6">
+        <div className="text-DarkGray font-semibold gap-2">
+          <h1 className="text-2xl">Login</h1>
+          <div className="flex">
+            <p className="border-b border-DarkGray">Login to join club</p>
+          </div>
         </div>
+        <Formik
+          initialValues={{
+            email: "",
+            password: "",
+            checkbox: false,
+          }}
+          onSubmit={async (values) => {
+            signInWithEmailAndPassword(auth, values.email, values.password)
+              .then((userCredential) => {
+                router.push("product");
+              })
+              .catch((error) => {});
+          }}
+        >
+          <LoginForm />
+        </Formik>
       </div>
-      <Formik
-        initialValues={{
-          email: "",
-          password: "",
-          checkbox: false,
-        }}
-        onSubmit={async (values) => {
-          signInWithEmailAndPassword(auth, values.email, values.password)
-            .then((userCredential) => {
-              router.push("product");
-            })
-            .catch((error) => {});
-        }}
-      >
-        <LoginForm />
-      </Formik>
       <div className="flex w-full flex-col gap-6 bg-WhiteMain px-6 py-4 rounded-2xl">
         <h1 className="flex font-semibold text-2xl text-DarkGray">
           Join Kicks Club Get <br /> Rewarded Today.
