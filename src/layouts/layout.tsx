@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "../theme/globals.css";
 import Header from "@/shared/components/header";
 import Footer from "@/shared/components/footer/footer";
+import { Provider } from "react-redux";
+import { store } from "@/redux/store";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

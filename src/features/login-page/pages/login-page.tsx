@@ -24,7 +24,7 @@ const LoginPage = () => {
 
   return (
     <div className="flex flex-col gap-6 sm:flex-row">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 py-4">
         <div className="text-DarkGray font-semibold gap-2">
           <h1 className="text-2xl">Login</h1>
           <div className="flex">

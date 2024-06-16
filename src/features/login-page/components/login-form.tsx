@@ -9,7 +9,7 @@ const LoginForm = () => {
   ];
 
   return (
-    <Form noValidate className="flex flex-col gap-6">
+    <Form noValidate className="flex flex-col gap-6 grow">
       {formOptions.map((item) => (
         <div className="flex w-full flex-row-reverse justify-end items-start gap-2">
           {item.id === "checkbox" ? (
@@ -26,13 +26,14 @@ const LoginForm = () => {
           />
         </div>
       ))}
-
-      <button
-        type="submit"
-        className="text-left bg-DarkGray px-4 py-3 rounded-lg text-Gray font-medium"
-      >
-        EMAIL LOGIN
-      </button>
+      <div className="flex grow items-end">
+        <button
+          type="submit"
+          className="text-left bg-DarkGray px-4 py-3 rounded-lg text-Gray font-medium grow"
+        >
+          EMAIL LOGIN
+        </button>
+      </div>
     </Form>
   );
 };
