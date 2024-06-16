@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Shoe from "../../../../public/big-shoe-product-page.png";
 import Shoe3 from "../../../../public/shoe3.png";
+import Shoe4 from "../../../../public/shoe4.png";
+import Shoe5 from "../../../../public/shoe5.png";
+import Shoe6 from "../../../../public/shoe6.png";
 
 const ProductPage = () => {
   return (
@@ -33,11 +36,23 @@ const ProductPage = () => {
           SHOP NOW DROPS
         </button>
       </div>
-      <div>
-        <Image src={Shoe3} alt="Shoe3" className="rounded-xl " />
-        <Image src={Shoe3} alt="Shoe3" className="rounded-xl " />
-        <Image src={Shoe3} alt="Shoe3" className="rounded-xl " />
-        <Image src={Shoe3} alt="Shoe3" className="rounded-xl " />
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="flex flex-col items-center">
+          <Image src={Shoe3} alt="Shoe3" className="rounded-xl" />
+          <p className="text-center">Text 1</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <Image src={Shoe4} alt="Shoe4" className="rounded-xl" />
+          <p className="text-center">Text 2</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <Image src={Shoe5} alt="Shoe5" className="rounded-xl" />
+          <p className="text-center">Text 3</p>
+        </div>
+        <div className="flex flex-col items-center">
+          <Image src={Shoe6} alt="Shoe6" className="rounded-xl" />
+          <p className="text-center">Text 4</p>
+        </div>
       </div>
     </div>
   );
