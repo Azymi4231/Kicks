@@ -12,23 +12,27 @@ import avatar3 from "../../../../public/avatar3.png";
 export const products = [
   {
     image: Shoe3,
-    text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    text: "Nike Air Force 1 ",
     id: "1",
+    price: 199,
   },
   {
     image: Shoe4,
-    text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    text: "Nike Air Max Plus",
     id: "2",
+    price: 109,
   },
   {
     image: Shoe5,
-    text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    text: "Nike Dunk Low Retro",
     id: "3",
+    price: 159,
   },
   {
     image: Shoe6,
-    text: "ADIDAS 4DFWD X PARLEY RUNNING SHOES",
+    text: "Nike Air Max Excee",
     id: "4",
+    price: 389,
   },
 ];
 

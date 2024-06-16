@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
 import Shoe1 from "../../../../public/Shoe-cart1.png";
 import { checkout, description } from "./cart-page-constans";
 import ThrashcanLogo from "@/shared/svg/thrashcan-logo-svg";
 import HeartLogo2 from "@/shared/svg/heart-logo2-svg";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
 const CartPage = () => {
+  const UserProducts = useSelector((state: RootState) => state.product);
   return (
     <div className="flex flex-col gap-4 ">
       <div className=" text-DarkGray flex flex-col gap-2 font-semibold">
@@ -21,25 +25,15 @@ const CartPage = () => {
             <p className="font-normal text-sm">
               Items in your bag not reserved- check out now to make them yours.
             </p>
-            <div className="flex gap-4">
-              {description.map((item, id) => (
+            <div className="flex flex-col gap-4">
+              {UserProducts.map((item, id) => (
                 <div className="flex gap-4">
-                  <Image src={Shoe1} alt="Shoe1" />
+                  <Image src={item.image} alt="Shoe1" />
                   <div className="flex flex-col gap-2">
                     <div className="font-semibold text-DarkGray">
-                      <h3 key={id} className="text-2xl">
-                        {item.name}
-                      </h3>
-                      <p key={id} className="text-sm">
-                        {item.desc1}
-                      </p>
-                      <p key={id} className="text-sm">
-                        {item.desc2}
-                      </p>
-                    </div>
-                    <div className="text-sm flex flex-row gap-4">
-                      <p key={id}>{item.size}</p>
-                      <p key={id}>{item.quantity}</p>
+                      <h3 className="text-2xl">{item.name}</h3>
+                      <p className="text-sm">desc1</p>
+                      <p className="text-sm">desc2</p>
                     </div>
                     <p key={id} className="text-Blue font-semibold text-2xl">
                       {item.price}
@@ -50,7 +44,7 @@ const CartPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-White rounded-md font-semibold text-DarkGray p-4 flex flex-col gap-4">
+        <div className="bg-White rounded-md font-semibold text-DarkGray p-4 flex flex-col grow gap-4">
           <h3 className="text-xl">Order Summary</h3>
           {checkout.map((item, id) => (
             <div className="flex flex-col gap-4">

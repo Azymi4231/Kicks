@@ -3,18 +3,17 @@ import Image from "next/image";
 import Shoe from "../../../../public/big-shoe-product-page.png";
 import { products, reviews } from "./product-constans";
 import StarsLogo from "@/shared/svg/stars-logo-svg";
-import NewLogo from "@/shared/svg/new-logo";
 import { useDispatch } from "react-redux";
-import TestPage from "../../home/pages/[id]";
 import { useRouter } from "next/navigation";
+import { changeActiveWebsite } from "@/redux/slices/active-website-slice";
 
 const ProductPage = () => {
-  const handleBuyItem = () => {};
+  const disptach = useDispatch();
   const router = useRouter();
   return (
     <>
-      <div className="flex-col flex gap-6">
-        <div className="font-bold text-5xl flex flex-row w-full justify-center gap-6">
+      <div className="flex-col flex gap-6 lg:gap-12">
+        <div className="font-bold text-5xl flex flex-row w-full justify-center gap-6 lg:text-9xl">
           <div className="text-DarkGray ">
             <h1> DO IT</h1>
           </div>
@@ -26,13 +25,7 @@ const ProductPage = () => {
             style={{ backgroundImage: `url(${Shoe.src})` }}
           >
             <div className="p-5 mr-20 flex-col flex gap-1">
-              <h2 className=" flex text-2xl text-white font-semibold">
-                NIKE AIR MAX
-              </h2>
-              <p className="text-white flex">
-                Nike introducing the new air max for everyone's comfort
-              </p>
-              <button className="flex font-medium bg-Blue text-White rounded-lg w-max px-4 py-2">
+              <button className="flex font-medium bg-Blue text-White rounded-lg w-max px-4 py-2 lg:text-lg">
                 SHOP NOW
               </button>
             </div>
@@ -42,11 +35,11 @@ const ProductPage = () => {
           <p className="flex font-semibold text-2xl sm:text-6xl">
             Don’t miss out new drops
           </p>
-          <button className="font-medium bg-Blue w-max text-White rounded-lg px-4 py-2 text-sm ">
+          <button className="font-medium bg-Blue w-max text-White rounded-lg px-4 py-2 text-sm lg:text-lg">
             SHOP NOW DROPS
           </button>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
           {products.map((product, index) => (
             <div key={index} className="flex flex-col ">
               <div className="rounded-xl overflow-hidden">
@@ -56,20 +49,20 @@ const ProductPage = () => {
                   layout="responsive"
                 />
               </div>
-              <p className="font-semibold text-DarkGray text-center">
+              <p className="py-1 font-semibold text-DarkGray text-left lg:text-lg lg:py-3 xl:text-xl">
                 {product.text}
               </p>
               <button
                 onClick={() => {
-                  router.push(`home/${index}`);
+                  disptach(changeActiveWebsite(product));
+                  router.push(`home/${product.id}`);
                 }}
-                className="bg-DarkGray flex flex-row rounded-lg px-4 py-2 font-medium text-xs"
+                className="bg-DarkGray flex flex-row rounded-lg px-4 py-2 font-medium text-xs lg:text-lg"
               >
                 <p className="text-white flex mx-auto">
                   View Product <span className="text-Yellow px-1">$125</span>
                 </p>
               </button>
-              <TestPage product={product} />
             </div>
           ))}
         </div>
