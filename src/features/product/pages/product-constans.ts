@@ -8,6 +8,7 @@ import review3 from "../../../../public/review3.png";
 import avatar1 from "../../../../public/avatar1.png";
 import avatar2 from "../../../../public/avatar2.png";
 import avatar3 from "../../../../public/avatar3.png";
+import { describe } from "node:test";
 
 export const products = [
   {
@@ -15,24 +16,28 @@ export const products = [
     text: "Nike Air Force 1 ",
     id: "1",
     price: 199,
+    desc: "Men’s Road Running Shoes ",
   },
   {
     image: Shoe4,
     text: "Nike Air Max Plus",
     id: "2",
     price: 109,
+    desc: "Men’s Road Skating Shoes ",
   },
   {
     image: Shoe5,
     text: "Nike Dunk Low Retro",
     id: "3",
     price: 159,
+    desc: "Men’s Road Casual Shoes ",
   },
   {
     image: Shoe6,
     text: "Nike Air Max Excee",
     id: "4",
     price: 389,
+    desc: "Men’s Road Bowling Shoes ",
   },
 ];
 
