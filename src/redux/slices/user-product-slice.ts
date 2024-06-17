@@ -1,10 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-interface productSlice {
-  value: number;
-}
-
 const initialState: any = [];
 
 const productSlice = createSlice({
@@ -14,8 +10,11 @@ const productSlice = createSlice({
     addProduct(state, action: PayloadAction<any>) {
       state.push(action.payload);
     },
+    deleteProducts(state) {
+      return [];
+    },
   },
 });
 
-export const { addProduct } = productSlice.actions;
+export const { addProduct, deleteProducts } = productSlice.actions;
 export default productSlice.reducer;

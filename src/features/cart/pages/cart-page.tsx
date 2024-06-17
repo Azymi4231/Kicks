@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import Shoe1 from "../../../../public/Shoe-cart1.png";
 import { checkout, description } from "./cart-page-constans";
 import ThrashcanLogo from "@/shared/svg/thrashcan-logo-svg";
 import HeartLogo2 from "@/shared/svg/heart-logo2-svg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
+import { deleteProducts } from "@/redux/slices/user-product-slice";
 const CartPage = () => {
   const UserProducts = useSelector((state: RootState) => state.product);
 
@@ -18,7 +18,7 @@ const CartPage = () => {
     const salesTax = 5;
     return productTotal + deliveryFee + salesTax;
   };
-
+  const disptach = useDispatch();
   return (
     <div className="flex flex-col gap-4 ">
       <div className=" text-DarkGray flex flex-col gap-2 font-semibold">
@@ -84,7 +84,7 @@ const CartPage = () => {
                 CHECKOUT
               </button>
               <div className="flex flex-row gap-1">
-                <button>
+                <button onClick={() => disptach(deleteProducts())}>
                   <ThrashcanLogo />
                 </button>
                 <button>
