@@ -1,11 +1,7 @@
-# Programming Quiz App
+# Kicks E-Commerce Shop
 
-Welcome to the Programming Quiz App, an engaging and educational Flutter application designed to test and enhance your programming knowledge. This project serves as an excellent example of Flutter's capabilities in creating interactive and user-friendly applications. Whether you're a beginner looking to learn more about programming or an experienced developer wanting to challenge yourself, this app offers a fun and informative experience through a variety of quiz questions.
-
+Welcome to Kicks, a sleek and efficient e-commerce shop built using React and Next.js. This application is designed to offer a seamless shopping experience, showcasing the power and versatility of modern web development technologies. From browsing the latest footwear collections to completing a purchase, every aspect is optimized for user satisfaction.
 Within this project, you will find a comprehensive display of my approach to creating an educational and interactive user experience. Each feature is thoughtfully implemented to ensure a seamless and enjoyable experience, showcasing my dedication to quality and attention to detail.
-
-As you explore the Programming Quiz App, you will get to know me—not just as a developer, but as an educator and problem solver. This project embodies my passion for combining technology and education to deliver valuable learning experiences.
-Highlights
 
 💻 Challenging Quiz Questions: Test your programming knowledge with a wide range of questions covering different topics and difficulty levels.
 
@@ -20,7 +16,10 @@ Technologies
 
 Built with Flutter, this application leverages a modern and efficient tech stack to ensure optimal performance and maintainability:
 
-[![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
-[![Dart](https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)](https://dart.dev/)
+[![React](https://img.shields.io/badge/React-gray?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+
+[![Redux Toolkit](https://img.shields.io/badge/Redux_Toolkit-764ABC?style=for-the-badge&logo=redux&logoColor=white)](https://redux-toolkit.js.org/)
+
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 ## App Preview
