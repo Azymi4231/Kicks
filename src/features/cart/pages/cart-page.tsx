@@ -8,6 +8,17 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 const CartPage = () => {
   const UserProducts = useSelector((state: RootState) => state.product);
+
+  const calculateTotalPrice = () => {
+    const productTotal = UserProducts.reduce(
+      (total, item) => total + item.price,
+      0
+    );
+    const deliveryFee = 6.99;
+    const salesTax = 5;
+    return productTotal + deliveryFee + salesTax;
+  };
+
   return (
     <div className="flex flex-col gap-4 ">
       <div className=" text-DarkGray flex flex-col gap-2 font-semibold">
@@ -54,8 +65,8 @@ const CartPage = () => {
           {checkout.map((item, id) => (
             <div className="flex text-lg flex-col gap-4">
               <div className="flex felx-row justify-between">
-                <p>ITEM</p>
-                <p>1</p>
+                <p>ITEMS</p>
+                <p>{UserProducts.length}</p>
               </div>
               <div className="flex felx-row justify-between">
                 <p>Delivery </p>
@@ -67,7 +78,7 @@ const CartPage = () => {
               </div>
               <div className="flex felx-row justify-between text-xl">
                 <p>Total</p>
-                <p>100$</p>
+                <p>${calculateTotalPrice()}</p>
               </div>
               <button className="bg-DarkGray text-White py-2 text-sm font-medium rounded-lg lg:py-4 lg:text-lg">
                 CHECKOUT
