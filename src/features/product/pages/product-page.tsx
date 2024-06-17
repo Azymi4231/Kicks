@@ -60,7 +60,8 @@ const ProductPage = () => {
                 className="bg-DarkGray flex flex-row rounded-lg px-4 py-2 font-medium text-xs lg:text-lg"
               >
                 <p className="text-white flex mx-auto">
-                  View Product <span className="text-Yellow px-1">$125</span>
+                  View Product{" "}
+                  <span className="text-Yellow px-1">${product.price}</span>
                 </p>
               </button>
             </div>

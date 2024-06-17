@@ -23,8 +23,8 @@ const LoginPage = () => {
   const auth = getAuth(app);
 
   return (
-    <div className="flex flex-col gap-6 sm:flex-row">
-      <div className="flex flex-col gap-6 py-4">
+    <div className="flex flex-col gap-6 lg:flex-row">
+      <div className="flex flex-col gap-6 py-4 lg:flex-grow">
         <div className="text-DarkGray font-semibold gap-2">
           <h1 className="text-2xl">Login</h1>
           <div className="flex">
@@ -48,7 +48,7 @@ const LoginPage = () => {
           <LoginForm />
         </Formik>
       </div>
-      <div className="flex w-full flex-col gap-6 bg-WhiteMain px-6 py-4 rounded-2xl">
+      <div className="flex w-full flex-col gap-6 bg-WhiteMain px-6 py-4 rounded-2xl lg:flex-grow-[1]">
         <h1 className="flex font-semibold text-2xl text-DarkGray">
           Join Kicks Club Get <br /> Rewarded Today.
         </h1>
@@ -68,7 +68,7 @@ const LoginPage = () => {
         </p>
         <button
           type="submit"
-          className="bg-DarkGray text-Gray rounded-lg text-left px-4 py-3 gap-10 font-medium text-sm  "
+          className="bg-DarkGray text-Gray rounded-lg text-left px-4 py-3 gap-10 font-medium text-md"
         >
           JOIN THE CLUB
         </button>
