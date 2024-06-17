@@ -24,3 +24,5 @@ Within this project, you will find a comprehensive display of my approach to cre
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-0F172A?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 ## App Preview
+![kicks1](https://github.com/Azymi4231/Kicks/assets/171338115/ce7efe70-a47f-4f8b-8f9a-acf2add5a032)
+![kicks2](https://github.com/Azymi4231/Kicks/assets/171338115/54814bbc-03c9-4dcf-b1c9-b3861f8fb3f2)
