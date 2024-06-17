@@ -3,7 +3,7 @@
 Welcome to Kicks, a sleek and efficient e-commerce shop built using React and Next.js. This application is designed to offer a seamless shopping experience, showcasing the power and versatility of modern web development technologies. From browsing the latest footwear collections to completing a purchase, every aspect is optimized for user satisfaction.
 Within this project, you will find a comprehensive display of my approach to creating an educational and interactive user experience. Each feature is thoughtfully implemented to ensure a seamless and enjoyable experience, showcasing my dedication to quality and attention to detail.
 
-#Highlights
+# Highlights
 
 🛒 Seamless Shopping Experience: Browse and purchase the latest footwear with ease, thanks to a user-friendly interface and efficient navigation.
 
@@ -15,7 +15,7 @@ Within this project, you will find a comprehensive display of my approach to cre
 
 🛠️ Easy Form Handling: Simplified and reliable form management with Formik, enhancing user interactions during the checkout process.
 
-Built with Flutter, this application leverages a modern and efficient tech stack to ensure optimal performance and maintainability:
+
 
 [![React](https://img.shields.io/badge/React-gray?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 
