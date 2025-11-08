@@ -8,25 +8,27 @@ import Image from "next/image";
 import { addProduct } from "@/redux/slices/user-product-slice";
 import { useRouter } from "next/navigation";
 
-export async function getStaticPaths() {
+import { GetStaticProps, GetStaticPaths } from "next";
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = products.map((product) => ({
     params: { id: product.id },
   }));
 
   return { paths, fallback: false };
-}
+};
 
-export async function getStaticProps({ params }) {
-  const product = products.find((p) => p.id === params.id);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { params } = context;
+  const product = products.find((p) => p.id === params?.id);
 
   if (!product) {
-    return {
-      notFound: true,
-    };
+    return { notFound: true };
   }
 
   return { props: { product } };
-}
+};
+
 
 const ProductPageId = () => {
   const router = useRouter();
