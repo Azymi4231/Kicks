@@ -1,2 +1,5 @@
-import { LoginPage } from "@/features/login-page";
-export default LoginPage;
+import { redirect } from 'next/navigation';
+
+export default function RootPage() {
+  redirect('/shop');
+}
