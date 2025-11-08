@@ -13,7 +13,7 @@ const Header = () => {
       <KicksLogo />
       <div
         onClick={() => {
-          router.push("/cart");
+          router.push("shop/cart");
         }}
         className="size-6 rounded-full bg-Yellow flex justify-center items-center text-sm font-bold cursor-pointer"
       >
