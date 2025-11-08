@@ -1,34 +1,36 @@
 "use client";
-import { products } from "../../product/pages/product-constans";
+import { products } from "@/features/home/pages/home-constans";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import HeartLogo from "@/shared/svg/heart-logo-svg";
-import { advantages } from "./home-page-constans";
+import { advantages } from "./product-page-constans";
 import Image from "next/image";
 import { addProduct } from "@/redux/slices/user-product-slice";
 import { useRouter } from "next/navigation";
 
-export async function getStaticPaths() {
+import { GetStaticProps, GetStaticPaths } from "next";
+
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = products.map((product) => ({
     params: { id: product.id },
   }));
 
   return { paths, fallback: false };
-}
+};
 
-export async function getStaticProps({ params }) {
-  const product = products.find((p) => p.id === params.id);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { params } = context;
+  const product = products.find((p) => p.id === params?.id);
 
   if (!product) {
-    return {
-      notFound: true,
-    };
+    return { notFound: true };
   }
 
   return { props: { product } };
-}
+};
 
-const TestPage = () => {
+
+const ProductPageId = () => {
   const router = useRouter();
   const dispatch = useDispatch();
 
@@ -64,7 +66,7 @@ const TestPage = () => {
               <button
                 className="font-medium bg-Blue text- w-full text-White rounded-md px-4 py-2"
                 onClick={() => {
-                  router.push("/cart");
+                  router.push("/shop/cart");
                 }}
               >
                 View cart
@@ -96,4 +98,4 @@ const TestPage = () => {
   );
 };
 
-export default TestPage;
+export default ProductPageId;
