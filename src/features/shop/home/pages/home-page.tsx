@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
-import Shoe from "../../../../public/big-shoe-product-page.png";
+
 import { products, reviews } from "./home-constans";
-import StarsLogo from "@/shared/svg/stars-logo-svg";
 import { useDispatch } from "react-redux";
 import { useRouter } from "next/navigation";
+import Shoe from "@/../public/big-shoe-product-page.png";
 import { changeActiveWebsite } from "@/redux/slices/active-website-slice";
+import StarsLogo from "@/shared/svg/stars-logo-svg";
 
 const HomePage = () => {
   const disptach = useDispatch();
