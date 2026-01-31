@@ -1,3 +1,3 @@
-import { ProductPage } from "@/features/product";
+import { ProductPage } from "@/features/shop/product";
 
 export default ProductPage;

@@ -1,13 +1,13 @@
-import Shoe3 from "../../../../public/shoe3.png";
-import Shoe4 from "../../../../public/shoe4.png";
-import Shoe5 from "../../../../public/shoe5.png";
-import Shoe6 from "../../../../public/shoe6.png";
-import review1 from "../../../../public/review1.png";
-import review2 from "../../../../public/review2.png";
-import review3 from "../../../../public/review3.png";
-import avatar1 from "../../../../public/avatar1.png";
-import avatar2 from "../../../../public/avatar2.png";
-import avatar3 from "../../../../public/avatar3.png";
+import Shoe3 from "@/../public/shoe3.png";
+import Shoe4 from "@/../public/shoe4.png";
+import Shoe5 from "@/../public/shoe5.png";
+import Shoe6 from "@/../public/shoe6.png";
+import review1 from "@/../public/review1.png";
+import review2 from "@/../public/review2.png";
+import review3 from "@/../public/review3.png";
+import avatar1 from "@/../public/avatar1.png";
+import avatar2 from "@/../public/avatar2.png";
+import avatar3 from "@/../public/avatar3.png";
 import { describe } from "node:test";
 
 export const products = [

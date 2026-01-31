@@ -1,14 +1,13 @@
 "use client";
-import { products } from "@/features/home/pages/home-constans";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
-import HeartLogo from "@/shared/svg/heart-logo-svg";
 import { advantages } from "./product-page-constans";
 import Image from "next/image";
-import { addProduct } from "@/redux/slices/user-product-slice";
 import { useRouter } from "next/navigation";
-
 import { GetStaticProps, GetStaticPaths } from "next";
+import { RootState } from "@/redux/store";
+import { addProduct } from "@/redux/slices/user-product-slice";
+import HeartLogo from "@/shared/svg/heart-logo-svg";
+import { products } from "@/features/shop/home/pages/home-constans";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = products.map((product) => ({
@@ -28,7 +27,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return { props: { product } };
 };
-
 
 const ProductPageId = () => {
   const router = useRouter();

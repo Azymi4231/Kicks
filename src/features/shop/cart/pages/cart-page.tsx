@@ -1,18 +1,18 @@
 "use client";
 import Image from "next/image";
 import { checkout, description } from "./cart-page-constans";
-import ThrashcanLogo from "@/shared/svg/thrashcan-logo-svg";
-import HeartLogo2 from "@/shared/svg/heart-logo2-svg";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/redux/store";
+import HeartLogo2 from "@/shared/svg/heart-logo2-svg";
+import ThrashcanLogo from "@/shared/svg/thrashcan-logo-svg";
 import { deleteProducts } from "@/redux/slices/user-product-slice";
+import { RootState } from "@/redux/store";
 const CartPage = () => {
   const UserProducts = useSelector((state: RootState) => state.product);
 
   const calculateTotalPrice = () => {
     const productTotal = UserProducts.reduce(
       (total, item) => total + item.price,
-      0
+      0,
     );
     const deliveryFee = 6.99;
     const salesTax = 5;
