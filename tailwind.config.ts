@@ -26,6 +26,7 @@ const config: Config = {
         WhiteMain: "#FAFAFA",
         DarkGray: "#232321",
         Blue: "#4A69E2",
+        LightBlue: "#EAF0FF",
         Yellow: "#FFA52F",
         White: "#FFFFFF",
       },

@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import "../theme/globals.css";
 import Header from "@/shared/components/header";
 import Footer from "@/shared/components/footer/footer";
