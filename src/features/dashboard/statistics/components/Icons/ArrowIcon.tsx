@@ -1,0 +1,24 @@
+import React from "react";
+
+const ArrowIcon = ({ className }: { className?: string }) => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M4.375 9.53125L10 3.90625L15.625 9.53125M10 4.6875V16.0938"
+        stroke="#232321"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  );
+};
+
+export default ArrowIcon;
