@@ -25,11 +25,11 @@ const StatisticsDataPills = () => {
   ];
 
   return (
-    <div className="flex justify-between items-center w-full gap-4">
+    <div className="flex w-full gap-4 justify-between ">
       {statsData.map((stat, index) => (
         <div
           key={index}
-          className="px-4 py-6 bg-WhiteMain rounded-2xl flex flex-col gap-2 w-full"
+          className="px-4 py-6 bg-WhiteMain rounded-2xl flex flex-col  w-full"
         >
           <p className="text-sm font-bold">{stat.title}</p>
           <div className="flex justify-between items-center">
