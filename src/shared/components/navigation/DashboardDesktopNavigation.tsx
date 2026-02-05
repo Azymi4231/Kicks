@@ -90,7 +90,7 @@ const DashboardDesktopNavigation = () => {
   };
 
   return (
-    <div className="flex h-screen w-64 flex-col justify-between border-r border-DarkGray bg-white p-4">
+    <div className="flex h-screen w-64 flex-col justify-between border-r border-DarkGray border-opacity-25 bg-white p-4">
       <div>
         <div className="flex mb-8 px-4 items-center justify-center">
           <KicksLogoDashboard />
